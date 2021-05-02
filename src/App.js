@@ -1,16 +1,31 @@
 import React, { Component } from "react";
 import { motion } from "framer-motion";
 import Button from "@material-ui/core/Button";
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from "@material-ui/core/styles";
 import ParticlesBg from "particles-bg";
 
 class App extends Component {
   render() {
 
-    const BootstrapButton = withStyles({
+    const easing = [0.6, -0.05, 0.01, 0.99]; //keyframes
+    const fadeIn2 = {
+      initial: {
+        opacity: 0,
+      },
+      animate: {
+        opacity: 1,
+        transition: {
+          duration: 2.5,
+          ease: easing,
+        },
+      },
+    };
+
+    const CustomButton = withStyles({
       root: {
-        backgroundColor: "",
-      }
+        backgroundColor: "'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)'",
+        boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+      },
     })(Button);
 
     let config = {
@@ -30,32 +45,30 @@ class App extends Component {
 
     return (
       <>
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0, y: -10 }}
-          animate={{ scale: 1.05, opacity: 1, y: 20 }}
-          transition={{ duration: 0.5 }}
-        >
-          <section className="d-flex align-items-center justify-content-center container" style={{ height: "100vh"}}>
-
+        <motion.div exit="exit" initial="initial" animate="animate">
+        <motion.div variants={fadeIn2}>
+          <section
+            className="d-flex align-items-center justify-content-center container"
+            style={{ height: "100vh" }}
+          >
             <div className="text-center">
-            <p className="pl-4 ml-5 text_pattarai">
-              PATTARAI
-            </p>
+              <p className="pl-4 ml-5 text_pattarai">PATTARAI</p>
 
-            <p className="title_word">
-            Mini conf
-            </p>
-            
-            <Button variant="contained" color="primary" className="mr-2">
-              Login In
-            </Button>
-            <Button variant="contained" color="primary">
-              Sign UP
-            </Button>
+              <p className="title_word">Mini Conf</p>
+
+              <CustomButton
+                variant="contained"
+                color="primary"
+                className="mr-2"
+              >
+                Login In
+              </CustomButton>
+              <Button variant="contained" color="primary">
+                Sign UP
+              </Button>
             </div>
-            
           </section>
-          
+          </motion.div>
         </motion.div>
 
         <ParticlesBg type="custom" config={config} bg={true} />

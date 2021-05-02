@@ -12,15 +12,15 @@
     font-size: 7rem;
     font-weight: 100px;
 
-    background-image: linear-gradient(to right, #833ab4, #1dfdd8);
+    background-image: linear-gradient(to right, #1dfdd8, #833ab4);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 
     background-size: 300%;
     background-position: -100%;
-
-    animation: animatedText 3s infinite  alternate-reverse;
+    
+    animation: animatedText 2s infinite  alternate-reverse;
 }
 
 @keyframes animatedText {
