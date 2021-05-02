@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
 
-.title_word{
+.title-word{
     font-family: Open Sans;
     font-size: 7rem;
     font-weight: 100px;
@@ -14,7 +14,6 @@
 
     background-size: 300%;
     background-position: -100%;
-
     animation: animatedText 2s infinite  alternate-reverse;
 }
 
@@ -27,8 +26,19 @@
     }
 }
 
-
-.text_pattarai{
+.text-pattarai{
     font-family: Montserrat;
     letter-spacing: 50px;
+}
+
+
+.img-animation{
+    background-image:  linear-gradient(to right, #1dfdd8, #833ab4);
+    mask-image: url("../images/pattaraiCircle.svg");
+    color: transparent;
+    background-size: 300%;
+    background-position: -100%;
+    mask-size: 100%;
+    mask-position: -100%;
+    animation: animatedText 2s infinite  alternate-reverse;
 }

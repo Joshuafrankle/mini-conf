@@ -54,8 +54,8 @@ class LandingPage extends Component {
             style={{ height: "100vh" }}
           >
             <div className="text-center">
-              <p className="pl-4 ml-5 text_pattarai">PATTARAI</p>
-              <p className="title_word">Mini Conf</p>
+              <p className="pl-4 ml-5 text-pattarai">PATTARAI</p>
+              <p className="title-word">Mini Conf</p>
               <Link to="/home">
               <CustomButton
                 variant="contained"

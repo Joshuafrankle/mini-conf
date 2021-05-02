@@ -1,13 +1,18 @@
 import React, { Component } from "react";
-
 class Home extends Component {
-   
-    render() { 
-        return ( 
-        <section className="d-flex justify-content-center align-items-center conatiner" style={{ height:"100vh"}}>
-            <h1>Welcome</h1>
-        </section> );
-    }
+  render() {
+    return (
+      <>
+        <div className="justify-content-center d-flex mt-2">
+          <img className="img-animation" width="150" height="150" alt="image" />
+        </div>
+
+        <section></section>
+
+        <section></section>
+      </>
+    );
+  }
 }
- 
+
 export default Home;
