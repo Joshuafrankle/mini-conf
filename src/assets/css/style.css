@@ -19,7 +19,7 @@
 
     background-size: 300%;
     background-position: -100%;
-    
+
     animation: animatedText 2s infinite  alternate-reverse;
 }
 
@@ -33,6 +33,6 @@
 }
 
 .text_pattarai{
-    
+    font-family: Montserrat;
     letter-spacing: 50px;
 }

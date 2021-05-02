@@ -8,7 +8,7 @@ class App extends Component {
   render() {
 
     const easing = [0.6, -0.05, 0.01, 0.99]; //keyframes
-    const fadeIn2 = {
+    const fadeIn = {
       initial: {
         opacity: 0,
       },
@@ -46,14 +46,13 @@ class App extends Component {
     return (
       <>
         <motion.div exit="exit" initial="initial" animate="animate">
-        <motion.div variants={fadeIn2}>
+        <motion.div variants={fadeIn}>
           <section
             className="d-flex align-items-center justify-content-center container"
             style={{ height: "100vh" }}
           >
             <div className="text-center">
               <p className="pl-4 ml-5 text_pattarai">PATTARAI</p>
-
               <p className="title_word">Mini Conf</p>
 
               <CustomButton
