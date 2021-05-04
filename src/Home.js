@@ -1,14 +1,18 @@
-import FadeIn from "./FadeIn";
+import FadeIn from "./animations/FadeIn";
 
 function Home() {
   return (
     <>
       <FadeIn>
-        <div className="justify-content-center d-flex mt-2 mb-4">
-          <img className="img-animation" width="120" height="120" alt="image" />
-        </div>
-
-        <section className="ml-5 container">
+        <section className="container">
+          <div className="justify-content-center d-flex mt-2 mb-4">
+            <img
+              className="img-animation"
+              width="120"
+              height="120"
+              alt="image"
+            />
+          </div>
           <iframe
             src="https://clips.twitch.tv/embed?clip=<slug>&parent=streamernews.example.com"
             height="500"
@@ -16,8 +20,6 @@ function Home() {
             allowfullscreen="<allow full screen>"
           ></iframe>
         </section>
-
-        <section></section>
       </FadeIn>
     </>
   );

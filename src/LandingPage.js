@@ -1,9 +1,20 @@
 import Button from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core/styles";
-import { Link } from "react-router-dom";
-import FadeIn from "./FadeIn";
+import { useHistory } from "react-router-dom";
+import "./pages/Firebase";
+import firebase from "firebase/app";
+import "firebase/auth";
+import FadeIn from "./animations/FadeIn";
+import Particles from "./animations/Particles";
 
 function LandingPage() {
+  const history = useHistory();
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      history.push("/home");
+    }
+  });
+
   function signInWithGoogle() {
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase
@@ -46,12 +57,13 @@ function LandingPage() {
               Sign UP
             </Button>
 
-            <CustomButton variant="contained" color="primary" className="mr-2">
+            {/* <CustomButton variant="contained" color="primary" className="ml-2">
               Login In
-            </CustomButton>
+            </CustomButton> */}
           </div>
         </section>
       </FadeIn>
+      <Particles />
     </>
   );
 }
