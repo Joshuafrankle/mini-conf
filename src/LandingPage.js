@@ -1,7 +1,7 @@
 import Button from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
-import Layout from "./Layout";
+import FadeIn from "./FadeIn";
 
 function LandingPage() {
   const CustomButton = withStyles({
@@ -13,7 +13,7 @@ function LandingPage() {
 
   return (
     <>
-      <Layout>
+      <FadeIn>
         <section
           className="d-flex align-items-center justify-content-center container"
           style={{ height: "100vh" }}
@@ -35,7 +35,7 @@ function LandingPage() {
             </Button>
           </div>
         </section>
-      </Layout>
+      </FadeIn>
     </>
   );
 }

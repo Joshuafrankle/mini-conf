@@ -1,9 +1,9 @@
-import Layout from "./Layout";
+import FadeIn from "./FadeIn";
 
 function Home() {
   return (
     <>
-      <Layout>
+      <FadeIn>
         <div className="justify-content-center d-flex mt-2 mb-4">
           <img className="img-animation" width="120" height="120" alt="image" />
         </div>
@@ -18,7 +18,7 @@ function Home() {
         </section>
 
         <section></section>
-      </Layout>
+      </FadeIn>
     </>
   );
 }

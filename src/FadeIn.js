@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Particles from "./Particles";
 
-function Layout(props) {
+function FadeIn(props) {
   const easing = [0.6, -0.05, 0.01, 0.99]; //keyframes
   const fadeIn = {
     initial: {
@@ -26,4 +26,4 @@ function Layout(props) {
   );
 }
 
-export default Layout;
+export default FadeIn;
