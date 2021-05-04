@@ -4,6 +4,22 @@ import { Link } from "react-router-dom";
 import FadeIn from "./FadeIn";
 
 function LandingPage() {
+  function signInWithGoogle() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((result) => {
+        console.log(result);
+        /** @type {firebase.auth.OAuthCredential} */
+        var credential = result.credential;
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+      });
+  }
+
   const CustomButton = withStyles({
     root: {
       backgroundColor: "",
@@ -21,18 +37,18 @@ function LandingPage() {
           <div className="text-center">
             <p className="pl-4 ml-5 text-pattarai">PATTARAI</p>
             <p className="title-word">Mini Conf</p>
-            <Link to="/home">
-              <CustomButton
-                variant="contained"
-                color="primary"
-                className="mr-2"
-              >
-                Login In
-              </CustomButton>
-            </Link>
-            <Button variant="contained" color="primary">
+
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={signInWithGoogle}
+            >
               Sign UP
             </Button>
+
+            <CustomButton variant="contained" color="primary" className="mr-2">
+              Login In
+            </CustomButton>
           </div>
         </section>
       </FadeIn>
