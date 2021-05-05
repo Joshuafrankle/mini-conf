@@ -1,4 +1,4 @@
-import LaptopLogo from "./assets/images/Laptop.svg";
+import LaptopLogo from "../assets/images/Laptop.svg";
 
 function Error404() {
   return (

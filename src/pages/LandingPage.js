@@ -54,7 +54,7 @@ function LandingPage() {
               color="primary"
               onClick={signInWithGoogle}
             >
-              Sign UP
+              Sign in with Google
             </Button>
 
             {/* <CustomButton variant="contained" color="primary" className="ml-2">
