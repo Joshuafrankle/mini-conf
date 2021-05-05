@@ -1,4 +1,4 @@
-import FadeIn from "./animations/FadeIn";
+import FadeIn from "../animations/FadeIn";
 
 function Home() {
   return (
