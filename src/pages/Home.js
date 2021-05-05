@@ -2,6 +2,7 @@ import Button from "@material-ui/core/Button";
 import FadeIn from "../animations/FadeIn";
 import firebase from "firebase/app";
 import { useHistory } from "react-router-dom";
+import Particles from "../animations/Particles";
 
 function Home() {
   const history = useHistory();
@@ -21,7 +22,7 @@ function Home() {
           <img className="img-animation" width="70" height="70" alt="" />
           <Button
             variant="contained"
-            className="float-right"
+            className="float-right mt-3"
             color="primary"
             onClick={logout}
           >
@@ -39,6 +40,7 @@ function Home() {
           ></iframe>
         </div>
       </FadeIn>
+      <Particles />
     </>
   );
 }
