@@ -17,7 +17,7 @@ function Home() {
   return (
     <>
       <FadeIn>
-        <Button varient="contained" onclick={logout}>
+        <Button varient="contained" onClick={logout}>
           Logout
         </Button>
         <section className="container">
