@@ -17,25 +17,27 @@ function Home() {
   return (
     <>
       <FadeIn>
-        <Button variant="contained" color="primary" onClick={logout}>
-          Logout
-        </Button>
-        <section className="container">
-          <div className="justify-content-center d-flex mt-2 mb-4">
-            <img
-              className="img-animation"
-              width="120"
-              height="120"
-              alt="image"
-            />
-          </div>
+        <div className="p-3">
+          <img className="img-animation" width="70" height="70" alt="" />
+          <Button
+            variant="contained"
+            className="float-right"
+            color="primary"
+            onClick={logout}
+          >
+            Logout
+          </Button>
+        </div>
+        <div className="container mt-3 justify-content-center d-flex">
           <iframe
-            src="https://clips.twitch.tv/embed?clip=<slug>&parent=streamernews.example.com"
-            height="500"
-            width="1100"
-            allowfullscreen="<allow full screen>"
+            className=""
+            width="1000"
+            height="450"
+            src="https://www.youtube.com/embed/BFfMbHRdg54"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           ></iframe>
-        </section>
+        </div>
       </FadeIn>
     </>
   );
