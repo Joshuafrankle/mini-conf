@@ -1,7 +1,7 @@
 import Button from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core/styles";
 import { useHistory } from "react-router-dom";
-import "./Firebase";
+import "./firebase";
 import firebase from "firebase/app";
 import "firebase/auth";
 import FadeIn from "../animations/FadeIn";
@@ -43,10 +43,10 @@ function LandingPage() {
       <FadeIn>
         <section
           className="d-flex align-items-center justify-content-center container"
-          style={{ height: "100vh", width: "100vw" }}
+          style={{ height: "100vh" }}
         >
-          <div className="text-center">
-            <p className="pl-4 ml-5 text-pattarai">PATTARAI</p>
+          <div className="text-center container">
+            <p className="pl-md-5 pl-0 text-pattarai">PATTARAI</p>
             <p className="title-word">Mini Conf</p>
 
             <Button
@@ -54,7 +54,7 @@ function LandingPage() {
               color="primary"
               onClick={signInWithGoogle}
             >
-              Sign in with Google
+              Sign in
             </Button>
 
             {/* <CustomButton variant="contained" color="primary" className="ml-2">
