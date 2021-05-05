@@ -1,9 +1,25 @@
+import { Button } from "@material-ui/core";
 import FadeIn from "../animations/FadeIn";
+import firebase from "firebase/app";
+import { useHistory } from "react-router-dom";
 
 function Home() {
+  const history = useHistory();
+  function logout() {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        history.push("/");
+      })
+      .catch((error) => {});
+  }
   return (
     <>
       <FadeIn>
+        <Button varient="contained" onclick={logout}>
+          Logout
+        </Button>
         <section className="container">
           <div className="justify-content-center d-flex mt-2 mb-4">
             <img
