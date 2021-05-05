@@ -1,4 +1,4 @@
-import { Button } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 import FadeIn from "../animations/FadeIn";
 import firebase from "firebase/app";
 import { useHistory } from "react-router-dom";
@@ -17,7 +17,7 @@ function Home() {
   return (
     <>
       <FadeIn>
-        <Button varient="contained" onClick={logout}>
+        <Button variant="contained" color="primary" onClick={logout}>
           Logout
         </Button>
         <section className="container">

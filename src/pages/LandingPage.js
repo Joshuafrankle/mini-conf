@@ -43,7 +43,7 @@ function LandingPage() {
       <FadeIn>
         <section
           className="d-flex align-items-center justify-content-center container"
-          style={{ height: "100vh" }}
+          style={{ height: "100vh", width: "100vw" }}
         >
           <div className="text-center">
             <p className="pl-4 ml-5 text-pattarai">PATTARAI</p>
