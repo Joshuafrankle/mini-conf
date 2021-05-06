@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-function Carousel(props) {
+function PopUp(props) {
   return (
     <>
       <motion.div
@@ -29,4 +29,4 @@ function Carousel(props) {
   );
 }
 
-export default Carousel;
+export default PopUp;
