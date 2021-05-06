@@ -5,9 +5,9 @@ function Carousel(props) {
     <>
       <motion.div
         whileHover={{ scale: 1.08 }}
-        className="card bg-black text-primary m-5 d-flex align-items-center"
+        className="card text-primary m-5 align-items-center"
         style={{
-          width: "14em",
+          width: "17em",
           boxShadow:
             "0 8px 16px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.16)",
         }}
@@ -23,7 +23,6 @@ function Carousel(props) {
           <h6 className="card-title col-12 p-0 font-weight-bold ">
             {props.title ? props.title : "Check this out"}
           </h6>
-          <div className="col-12 p-0">{props.children}</div>
         </div>
       </motion.div>
     </>
