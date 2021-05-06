@@ -4,7 +4,7 @@ import firebase from "firebase/app";
 import { useHistory } from "react-router-dom";
 import Particles from "../animations/Particles";
 import Marquee from "react-fast-marquee";
-import PopUp from "../animations/Carousel";
+import Carousel from "../animations/Carousel";
 
 function Home() {
   const history = useHistory();
@@ -54,7 +54,7 @@ function Home() {
         gradientWidth={0}
         gradientColor={[31, 31, 31]}
       >
-        <PopUp
+        <Carousel
           src="https://www.youtube.com/watch?v=gQRX1UlQ0Rs"
           title="Pattarai's Intro | Who are we? | Special Event | May 2021"
           text="Check out the intro we made for Pattarai's Special Event. Made with Cinema4D. "
