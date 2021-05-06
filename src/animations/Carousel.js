@@ -5,7 +5,7 @@ function Carousel(props) {
     <>
       <motion.div
         whileHover={{ scale: 1.08 }}
-        className="card text-primary m-5 align-items-center"
+        className="card text-primary m-4 align-items-center"
         style={{
           width: "17em",
           boxShadow:
@@ -13,9 +13,9 @@ function Carousel(props) {
         }}
       >
         <iframe
-          className="col-md-8 col-12 mt-2"
+          className="col-md-8 col-12 m-2"
           src={props.src}
-          style={{ height: "100px", width: "auto" }}
+          style={{ height: "100px", width: "300px" }}
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         ></iframe>
