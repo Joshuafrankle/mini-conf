@@ -13,6 +13,7 @@ function PopUp(props) {
         }}
       >
         <iframe
+          title="Youtube videos"
           className="col-md-8 col-12 m-2"
           src={props.src}
           style={{ height: "100px", width: "300px" }}

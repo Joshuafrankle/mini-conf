@@ -52,6 +52,7 @@ function Home() {
           >
             <div className="card-body d-md-flex d-block">
               <iframe
+                title="Youtube Live Stream"
                 className="col-md-8 col-12"
                 style={{ minHeight: "40vh" }}
                 src="https://www.youtube.com/embed/BFfMbHRdg54"
@@ -61,6 +62,7 @@ function Home() {
               ></iframe>
 
               <iframe
+                title="Titan Embed"
                 className="col-md-4 col-12"
                 src="https://titanembeds.com/embed/808401706337435709"
                 style={{ minHeight: "35vh" }}

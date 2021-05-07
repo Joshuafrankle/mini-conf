@@ -1,5 +1,5 @@
 import Button from "@material-ui/core/Button";
-import { withStyles } from "@material-ui/core/styles";
+// import { withStyles } from "@material-ui/core/styles";
 import { useHistory } from "react-router-dom";
 import "./firebase";
 import firebase from "firebase/app";
@@ -23,20 +23,20 @@ function LandingPage() {
       .then((result) => {
         console.log(result);
         /** @type {firebase.auth.OAuthCredential} */
-        var credential = result.credential;
+        // var credential = result.credential;
       })
       .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
+        // var errorCode = error.code;
+        // var errorMessage = error.message;
       });
   }
 
-  const CustomButton = withStyles({
-    root: {
-      backgroundColor: "",
-      boxShadow: "",
-    },
-  })(Button);
+  // const CustomButton = withStyles({
+  //   root: {
+  //     backgroundColor: "",
+  //     boxShadow: "",
+  //   },
+  // })(Button);
 
   return (
     <>
