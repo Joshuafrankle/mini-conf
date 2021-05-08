@@ -2,7 +2,7 @@ import Button from "@material-ui/core/Button";
 // import { withStyles } from "@material-ui/core/styles";
 import { useHistory } from "react-router-dom";
 import firebase from "firebase/app";
-import "/firebase";
+import "./firebase";
 import "firebase/auth";
 import FadeIn from "../animations/FadeIn";
 import Particles from "../animations/Particles";
