@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import Particles from "../animations/Particles";
 import YoutubeCards from "../components/YoutubeCards";
 
-function Home() {
+function Home(props) {
   const history = useHistory();
   function logout() {
     firebase
@@ -51,10 +51,11 @@ function Home() {
           >
             <div className="card-body d-md-flex d-block">
               <iframe
+                id="youtubeLive"
                 title="Youtube Live Stream"
                 className="col-md-8 col-12"
                 style={{ minHeight: "40vh" }}
-                src="https://www.youtube.com/embed/BFfMbHRdg54"
+                src={props.src}
                 frameborder="0"
                 allowfullscreen
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -71,9 +72,8 @@ function Home() {
           </div>
         </section>
         <YoutubeCards />
-
-        <Particles />
       </FadeIn>
+      <Particles />
     </>
   );
 }

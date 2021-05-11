@@ -31,14 +31,22 @@ export default class YoutubeCards extends React.Component {
           gradientColor={[31, 31, 31]}
         >
           {this.state.videoitems.map((videoitems) => (
+             <a
+             href="#"
+             onClick={() => {
+              var livestream = document.getElementById("youtubeLive")
+              livestream.src = "https://youtube.com/embed/" + videoitems.contentDetails.videoId
+             }}
+           >
             <PopUp
               src={
-                "https://www.youtube.com/embed/" +
-                videoitems.contentDetails.videoId
+                videoitems.snippet.thumbnails.high.url
               }
               title={videoitems.snippet.title}
             />
-          ))}
+           </a>
+           )
+           )}
         </Marquee>
       </div>
     );
