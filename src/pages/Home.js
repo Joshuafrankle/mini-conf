@@ -3,8 +3,7 @@ import FadeIn from "../animations/FadeIn";
 import firebase from "firebase/app";
 import { useHistory } from "react-router-dom";
 import Particles from "../animations/Particles";
-import Marquee from "react-fast-marquee";
-import PopUp from "../animations/PopUp";
+import YoutubeCards from "../components/YoutubeCards";
 
 function Home() {
   const history = useHistory();
@@ -71,18 +70,8 @@ function Home() {
             </div>
           </div>
         </section>
-        <Marquee
-          direction="right"
-          speed={30}
-          gradient
-          gradientWidth={0}
-          gradientColor={[31, 31, 31]}
-        >
-          <PopUp
-            src="https://www.youtube.com/embed/gQRX1UlQ0Rs"
-            title="Pattarai's Intro | Who are we? | Special Event | May 2021"
-          />
-        </Marquee>
+        <YoutubeCards />
+
         <Particles />
       </FadeIn>
     </>
