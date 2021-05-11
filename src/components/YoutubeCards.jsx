@@ -34,8 +34,9 @@ export default class YoutubeCards extends React.Component {
              <button
              onClick={() => {
               var livestream = document.getElementById("youtubeLive")
-              livestream.src = "https://youtube.com/embed/" + videoitems.contentDetails.videoId
+              livestream.src = "https://www.youtube.com/embed/" + videoitems.contentDetails.videoId
              }}
+             
            >
             <PopUp
               src={
