@@ -31,8 +31,7 @@ export default class YoutubeCards extends React.Component {
           gradientColor={[31, 31, 31]}
         >
           {this.state.videoitems.map((videoitems) => (
-             <a
-             href="#"
+             <button
              onClick={() => {
               var livestream = document.getElementById("youtubeLive")
               livestream.src = "https://youtube.com/embed/" + videoitems.contentDetails.videoId
@@ -44,7 +43,7 @@ export default class YoutubeCards extends React.Component {
               }
               title={videoitems.snippet.title}
             />
-           </a>
+           </button>
            )
            )}
         </Marquee>

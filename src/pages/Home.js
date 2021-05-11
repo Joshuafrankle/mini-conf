@@ -65,7 +65,7 @@ function Home(props) {
                 title="Titan Embed"
                 className="col-md-4 col-12"
                 src="https://titanembeds.com/embed/808401706337435709"
-                style={{ minHeight: "35vh" }}
+                style={{ minHeight: "34vh" }}
                 frameborder="0"
               ></iframe>
             </div>
