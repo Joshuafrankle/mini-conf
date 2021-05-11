@@ -5,7 +5,7 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import FadeIn from "../animations/FadeIn";
 import Particles from "../animations/Particles";
-import "./firebase";
+import "../firebase";
 
 function LandingPage() {
   const history = useHistory();
