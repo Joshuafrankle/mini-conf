@@ -52,6 +52,9 @@
     font-size: 10px;
     letter-spacing: 25px;
   }
+  .stream-text {
+    font-size: 15px;
+  }
 }
 
 button {

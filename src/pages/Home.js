@@ -4,6 +4,7 @@ import firebase from "firebase/app";
 import { useHistory } from "react-router-dom";
 import Particles from "../animations/Particles";
 import YoutubeCards from "../components/YoutubeCards";
+import NoLiveStream from "../assets/images/NoStream.png";
 
 function Home(props) {
   const history = useHistory();
@@ -50,12 +51,24 @@ function Home(props) {
             }}
           >
             <div className="card-body d-md-flex d-block">
+              <div id="no-stream">
+                <img
+                  className="img-fluid"
+                  src={NoLiveStream}
+                  height={400}
+                  alt=""
+                  srcset=""
+                />
+                <h5 className="text-center stream-text text-secondary">
+                  Live Stream is Down. Check out our recorded events!
+                </h5>
+              </div>
               <iframe
                 id="youtubeLive"
                 title="Youtube Live Stream"
-                className="col-md-8 col-12"
-                style={{ minHeight: "40vh" }}
-                src={props.src}
+                className="col-md-8"
+                style={{ minHeight: "40vh", display: "none" }}
+                src={NoLiveStream}
                 frameborder="0"
                 allowfullscreen
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -64,7 +77,7 @@ function Home(props) {
               <iframe
                 title="Titan Embed"
                 className="col-md-4 col-12"
-                src="https://titanembeds.com/embed/808401706337435709"
+                src="https://titanembeds.com/embed/808401706337435709?css=31"
                 style={{ minHeight: "34vh" }}
                 frameborder="0"
               ></iframe>

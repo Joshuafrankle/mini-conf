@@ -5,7 +5,7 @@ function PopUp(props) {
     <>
       <motion.div
         whileHover={{ scale: 1.08 }}
-        className="card text-primary m-5 align-items-center"
+        className="card text-dark text-justify m-5 align-items-center"
         style={{
           width: "17em",
           boxShadow:
@@ -19,7 +19,7 @@ function PopUp(props) {
           style={{ height: "140px", width: "210px" }}
         />
         <div className="card-body d-flex align-content-between flex-wrap">
-          <h6 className="card-title col-12 p-0 font-weight-bold ">
+          <h6 className="card-title px-2 text-left col-12 p-0 font-weight-bold ">
             {props.title ? props.title : "Check this out"}
           </h6>
         </div>

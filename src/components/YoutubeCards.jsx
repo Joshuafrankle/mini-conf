@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import Marquee from "react-fast-marquee";
-import PopUp from "../animations/PopUp";
+import PopUp from "../animations/PopUpCards";
 
 export default class YoutubeCards extends React.Component {
   state = {
@@ -33,8 +33,10 @@ export default class YoutubeCards extends React.Component {
           {this.state.videoitems.map((videoitems) => (
              <button
              onClick={() => {
-              var livestream = document.getElementById("youtubeLive")
-              livestream.src = "https://www.youtube.com/embed/" + videoitems.contentDetails.videoId
+              var livestream = document.getElementById("youtubeLive");
+              livestream.style.display = "block";
+              document.getElementById("no-stream").style.display = "none";
+              livestream.src = "https://www.youtube.com/embed/" + videoitems.contentDetails.videoId;
              }}
              
            >
