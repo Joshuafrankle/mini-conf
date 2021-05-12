@@ -57,7 +57,6 @@ function Home(props) {
                   src={NoLiveStream}
                   height={400}
                   alt=""
-                  srcset=""
                 />
                 <h5 className="text-center stream-text text-secondary">
                   Live Stream is Down. Check out our recorded events!
@@ -69,8 +68,8 @@ function Home(props) {
                 className="col-md-8"
                 style={{ minHeight: "40vh", display: "none" }}
                 src={NoLiveStream}
-                frameborder="0"
-                allowfullscreen
+                frameBorder="0"
+                allowFullScreen
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               ></iframe>
 
@@ -79,7 +78,7 @@ function Home(props) {
                 className="col-md-4 col-12"
                 src="https://titanembeds.com/embed/808401706337435709?css=31"
                 style={{ minHeight: "34vh" }}
-                frameborder="0"
+                frameBorder="0"
               ></iframe>
             </div>
           </div>

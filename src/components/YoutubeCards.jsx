@@ -15,7 +15,7 @@ export default class YoutubeCards extends React.Component {
       )
       .then((res) => {
         const videoitems = res.data.items;
-        console.log(videoitems);
+        //console.log(videoitems);
         this.setState({ videoitems });
       });
   }
@@ -30,8 +30,9 @@ export default class YoutubeCards extends React.Component {
           gradientWidth={0}
           gradientColor={[31, 31, 31]}
         >
-          {this.state.videoitems.map((videoitems) => (
+          {this.state.videoitems.map((videoitems, id) => (
              <button
+             key={id}
              onClick={() => {
               var livestream = document.getElementById("youtubeLive");
               livestream.style.display = "block";
