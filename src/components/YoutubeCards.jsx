@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import Marquee from "react-fast-marquee";
 import PopUp from "../animations/PopUpCards";
+import { animateScroll as scroll } from "react-scroll";
 
 export default class YoutubeCards extends React.Component {
   state = {
@@ -21,6 +22,9 @@ export default class YoutubeCards extends React.Component {
   }
 
   render() {
+    function scrollTop() {
+      scroll.scrollMore(-330);
+    }
     return (
       <div>
         <Marquee
@@ -31,25 +35,24 @@ export default class YoutubeCards extends React.Component {
           gradientColor={[31, 31, 31]}
         >
           {this.state.videoitems.map((videoitems, id) => (
-             <button
-             key={id}
-             onClick={() => {
-              var livestream = document.getElementById("youtubeLive");
-              livestream.style.display = "block";
-              document.getElementById("no-stream").style.display = "none";
-              livestream.src = "https://www.youtube.com/embed/" + videoitems.contentDetails.videoId;
-             }}
-             
-           >
-            <PopUp
-              src={
-                videoitems.snippet.thumbnails.high.url
-              }
-              title={videoitems.snippet.title}
-            />
-           </button>
-           )
-           )}
+            <button
+              key={id}
+              onClick={() => {
+                scrollTop();
+                var livestream = document.getElementById("youtubeLive");
+                livestream.style.display = "block";
+                document.getElementById("no-stream").style.display = "none";
+                livestream.src =
+                  "https://www.youtube.com/embed/" +
+                  videoitems.contentDetails.videoId;
+              }}
+            >
+              <PopUp
+                src={videoitems.snippet.thumbnails.high.url}
+                title={videoitems.snippet.title}
+              />
+            </button>
+          ))}
         </Marquee>
       </div>
     );
