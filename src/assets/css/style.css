@@ -3,16 +3,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap");
 
 .theme-dark {
-  --color-start: #ff4d00;
-  --color-end: #ff9900;
+  --color-start: #ff4500;
+  --color-end: #ff8c00;
+  --bg-color: #000000;
+  --text-color: #ffffff;
 }
 
 .theme-light {
   --color-start: #1dfdd8;
   --color-end: #833ab4;
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+body {
+  background-color: var(--bg-color);
 }
 
 .text-pattarai {
+  color: var(--text-color);
   font-family: Montserrat;
   letter-spacing: 50px;
 }
