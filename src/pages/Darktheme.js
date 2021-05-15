@@ -1,12 +1,7 @@
-import { useEffect } from "react";
-import { setLocalTheme, checkTheme } from "./theme";
+import { setLocalTheme } from "./theme";
 import Button from "@material-ui/core/Button";
 
 export default function Toggle() {
-  useEffect(() => {
-    checkTheme();
-  });
-
   const handleOnClick = () => {
     if (localStorage.getItem("theme") === "theme-light") {
       setLocalTheme("theme-dark");

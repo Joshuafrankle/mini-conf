@@ -1,14 +1,20 @@
 import Button from "@material-ui/core/Button";
-// import { withStyles } from "@material-ui/core/styles";
+import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/auth";
 import FadeIn from "../animations/FadeIn";
 import Particles from "../animations/Particles";
 import "../firebase";
+import { checkTheme } from "./theme";
+// import { withStyles } from "@material-ui/core/styles";
 //import Toggle from "./Darktheme";
 
 function LandingPage() {
+  useEffect(() => {
+    checkTheme();
+  });
+
   const history = useHistory();
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
