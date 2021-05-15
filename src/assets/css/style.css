@@ -3,13 +3,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap");
 
 .theme-dark {
-  --dark-start: #ff4d00;
-  --dark-end: #ff9900;
+  --color-start: #ff4d00;
+  --color-end: #ff9900;
 }
 
 .theme-light {
-  --light-start: #1dfdd8;
-  --light-end: #833ab4;
+  --color-start: #1dfdd8;
+  --color-end: #833ab4;
 }
 
 .text-pattarai {
@@ -33,8 +33,8 @@
 
   background-image: linear-gradient(
     to right,
-    var(--light-start),
-    var(--light-end)
+    var(--color-start),
+    var(--color-end)
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -49,8 +49,8 @@
 .img-animation {
   background-image: linear-gradient(
     to right,
-    var(--light-start),
-    var(--light-end)
+    var(--color-start),
+    var(--color-end)
   );
   mask-image: url("../images/pattaraiCircle.svg");
   color: transparent;
