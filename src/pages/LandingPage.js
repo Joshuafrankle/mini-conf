@@ -6,6 +6,7 @@ import "firebase/auth";
 import FadeIn from "../animations/FadeIn";
 import Particles from "../animations/Particles";
 import "../firebase";
+import Toggle from "./Darktheme";
 
 function LandingPage() {
   const history = useHistory();
@@ -41,7 +42,9 @@ function LandingPage() {
   return (
     <>
       <FadeIn>
-        <p className="pt-3 px-3"></p>
+        <p className="pt-3 px-3">
+          <Toggle />
+        </p>
 
         <section
           className="d-flex align-items-center justify-content-center container"
