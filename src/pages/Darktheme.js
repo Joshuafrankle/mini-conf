@@ -10,6 +10,8 @@ export default function Toggle() {
   const handleOnClick = () => {
     if (localStorage.getItem("theme") === "theme-light") {
       setLocalTheme("theme-dark");
+    } else if (localStorage.getItem("theme") === "theme-dark") {
+      setLocalTheme("theme-light");
     } else {
       setLocalTheme("theme-light");
     }
