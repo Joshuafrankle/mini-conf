@@ -2,23 +2,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap");
 
-.title-word {
-  font-family: Open Sans;
-  font-size: 7rem;
-  font-weight: 100px;
-
-  background-image: linear-gradient(to right, #1dfdd8, #833ab4);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-
-  background-size: 300%;
-  background-position: -100%;
-  animation: animatedText 2s infinite alternate-reverse;
-  white-space: nowrap;
+.theme-dark {
+  --dark-start: #ff4d00;
+  --dark-end: #ff9900;
 }
 
-@keyframes animatedText {
+.theme-light {
+  --light-start: #1dfdd8;
+  --light-end: #833ab4;
+}
+
+.text-pattarai {
+  font-family: Montserrat;
+  letter-spacing: 50px;
+}
+
+@keyframes animate {
   from {
     background-position: 0%;
   }
@@ -27,20 +26,46 @@
   }
 }
 
-.text-pattarai {
-  font-family: Montserrat;
-  letter-spacing: 50px;
+.title-word {
+  font-family: Open Sans;
+  font-size: 7rem;
+  font-weight: 100px;
+
+  background-image: linear-gradient(
+    to right,
+    var(--light-start),
+    var(--light-end)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  background-size: 300%;
+  background-position: -100%;
+  animation: animate 2s infinite alternate-reverse;
+  white-space: nowrap;
 }
 
 .img-animation {
-  background-image: linear-gradient(to right, #1dfdd8, #833ab4);
+  background-image: linear-gradient(
+    to right,
+    var(--light-start),
+    var(--light-end)
+  );
   mask-image: url("../images/pattaraiCircle.svg");
   color: transparent;
   background-size: 300%;
   background-position: -100%;
   mask-size: 100%;
   mask-position: -100%;
-  animation: animatedText 2s infinite alternate-reverse;
+  animation: animate 2s infinite alternate-reverse;
+}
+
+button {
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
 }
 
 @media only screen and (max-width: 700px) {
@@ -55,11 +80,4 @@
   .stream-text {
     font-size: 15px;
   }
-}
-
-button {
-  background: transparent;
-  box-shadow: 0px 0px 0px transparent;
-  border: 0px solid transparent;
-  text-shadow: 0px 0px 0px transparent;
 }
