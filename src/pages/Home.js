@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import Particles from "../animations/Particles";
 import YoutubeCards from "../components/YoutubeCards";
 import NoLiveStream from "../assets/images/NoStream.png";
+import Toggle from "../DarkTheme";
 
 function Home(props) {
   const history = useHistory();
@@ -20,7 +21,10 @@ function Home(props) {
   return (
     <>
       <FadeIn>
-        <div className="p-3">
+        <div className="p-3 text-center">
+          <div className="float-left mt-3">
+            <Toggle />
+          </div>
           <a
             href="https://www.pattarai.in/"
             target="_blank"
