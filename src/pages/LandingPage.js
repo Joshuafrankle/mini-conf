@@ -45,15 +45,13 @@ function LandingPage() {
             <Toggle />
           </p>
         </div>
-
         <div
-          className="d-flex align-items-center justify-content-center container pr-4"
-          style={{ height: "100vh", width: "100vw" }}
+          className="d-flex align-items-center justify-content-center container"
+          style={{ height: "100vh" }}
         >
-          <div className="text-center container">
+          <div className="text-center main-bg">
             <p className="pl-md-5 pl-0 text-pattarai">PATTARAI</p>
             <p className="title-word">Mini Conf</p>
-
             <Button class="CustomButton" onClick={signInWithGoogle}>
               SIGN IN
             </Button>
