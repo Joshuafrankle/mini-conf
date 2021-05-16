@@ -1,4 +1,4 @@
-import { setLocalTheme } from "./theme";
+import { setLocalTheme } from "./pages/theme";
 import Button from "@material-ui/core/Button";
 import { useState } from "react";
 
