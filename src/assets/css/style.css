@@ -1,7 +1,7 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 .theme-dark {
   --color-start: #833ab4;
@@ -19,7 +19,7 @@
   --text-color: #000000;
   --button-text-color: #0c4ec9;
   --button-bg-color: #ffffff;
-  --button-shadow: 1px 1px 5px #888888;
+  --button-shadow: 1px 1px 5px #8f78f8;
 }
 
 body {
@@ -30,7 +30,7 @@ body {
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
   font-weight: bold;
-  font-family: Raleway;
+  font-family: Roboto;
   letter-spacing: 1px;
   border-radius: 7px;
   padding: 10px;
@@ -105,5 +105,8 @@ button {
   }
   .stream-text {
     font-size: 15px;
+  }
+  .CustomButton {
+    font-size: 11px;
   }
 }
