@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function Toggle() {
   const [btnImage, setBtnImage] = useState(
-    localStorage.getItem("theme") == "theme-light" ? "🌞" : "🌛"
+    localStorage.getItem("theme") === "theme-light" ? "🌞" : "🌛"
   );
 
   const handleOnClick = () => {
