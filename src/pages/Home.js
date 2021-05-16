@@ -28,13 +28,8 @@ function Home(props) {
           >
             <img className="img-animation" width="70" height="70" alt="" />
           </a>
-          <Button
-            variant="contained"
-            className="float-right mt-3"
-            color="primary"
-            onClick={logout}
-          >
-            Logout
+          <Button class="CustomButton float-right mt-3" onClick={logout}>
+            LOGOUT
           </Button>
         </div>
         <section

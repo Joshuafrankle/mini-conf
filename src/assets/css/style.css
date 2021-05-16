@@ -1,6 +1,7 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 
 .theme-dark {
   --color-start: #833ab4;
@@ -21,12 +22,12 @@
   --button-shadow: 1px 1px 5px #888888;
 }
 
-.buttonColor {
+.CustomButton {
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
   font-weight: bold;
-  font-family: Montserrat;
-  letter-spacing: 1.5px;
+  font-family: Raleway;
+  letter-spacing: 1px;
   border-radius: 7px;
   padding: 10px;
   box-shadow: var(--button-shadow);

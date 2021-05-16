@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 import FadeIn from "../animations/FadeIn";
 import Particles from "../animations/Particles";
 import { checkTheme } from "./theme";
-import Toggle from "./Darktheme";
+import Toggle from "./DarkTheme";
 
 function LandingPage() {
   const history = useHistory();
@@ -39,11 +39,14 @@ function LandingPage() {
 
   return (
     <>
-      <p className="pt-3 float-left px-3">
-        <Toggle />
-      </p>
       <FadeIn>
-        <section
+        <div>
+          <p className="pt-3 float-left ml-3">
+            <Toggle />
+          </p>
+        </div>
+
+        <div
           className="d-flex align-items-center justify-content-center container"
           style={{ height: "100vh" }}
         >
@@ -51,11 +54,11 @@ function LandingPage() {
             <p className="pl-md-5 pl-0 text-pattarai">PATTARAI</p>
             <p className="title-word">Mini Conf</p>
 
-            <Button class="buttonColor" onClick={signInWithGoogle}>
+            <Button class="CustomButton" onClick={signInWithGoogle}>
               SIGN IN
             </Button>
           </div>
-        </section>
+        </div>
       </FadeIn>
       <Particles />
     </>
