@@ -11,7 +11,7 @@ function Particles() {
     alpha: [10, 1],
     scale: [0.1, 0.4],
     position: "all",
-    color: ["ff4d00", "ff9900"],
+    color: ["3b3b3b", "ffffff"],
     cross: "dead",
     random: 15,
   };

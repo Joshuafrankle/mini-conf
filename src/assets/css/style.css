@@ -3,10 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap");
 
 .theme-dark {
-  --color-start: #ff4500;
-  --color-end: #ffd700;
+  --color-start: #833ab4;
+  --color-end: #1dfdd8;
   --bg-color: #000000;
-  --text-color: #ffffff;
+  --text-color: #fafafa;
+  --button-text-color: #fafafa;
+  --button-bg-color: #161616;
 }
 
 .theme-light {
@@ -14,6 +16,20 @@
   --color-end: #833ab4;
   --bg-color: #ffffff;
   --text-color: #000000;
+  --button-text-color: #0c4ec9;
+  --button-bg-color: #ffffff;
+  --button-shadow: 1px 1px 5px #888888;
+}
+
+.buttonColor {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  font-weight: bold;
+  font-family: Montserrat;
+  letter-spacing: 1.5px;
+  border-radius: 7px;
+  padding: 10px;
+  box-shadow: var(--button-shadow);
 }
 
 body {

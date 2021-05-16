@@ -1,20 +1,15 @@
+import firebase from "firebase/app";
+import "firebase/auth";
+import "../firebase";
 import Button from "@material-ui/core/Button";
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import firebase from "firebase/app";
-import "firebase/auth";
 import FadeIn from "../animations/FadeIn";
 import Particles from "../animations/Particles";
-import "../firebase";
 import { checkTheme } from "./theme";
-// import { withStyles } from "@material-ui/core/styles";
-//import Toggle from "./Darktheme";
+import Toggle from "./Darktheme";
 
 function LandingPage() {
-  useEffect(() => {
-    checkTheme();
-  });
-
   const history = useHistory();
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
@@ -38,20 +33,16 @@ function LandingPage() {
       });
   }
 
-  // const CustomButton = withStyles({
-  //   root: {
-  //     backgroundColor: "",
-  //     boxShadow: "",
-  //   },
-  // })(Button);
+  useEffect(() => {
+    checkTheme();
+  });
 
   return (
     <>
+      <p className="pt-3 float-left px-3">
+        <Toggle />
+      </p>
       <FadeIn>
-        {/* <p className="pt-3 px-3">
-          <Toggle />
-        </p> */}
-
         <section
           className="d-flex align-items-center justify-content-center container"
           style={{ height: "100vh" }}
@@ -60,21 +51,12 @@ function LandingPage() {
             <p className="pl-md-5 pl-0 text-pattarai">PATTARAI</p>
             <p className="title-word">Mini Conf</p>
 
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={signInWithGoogle}
-            >
-              Sign in
+            <Button class="buttonColor" onClick={signInWithGoogle}>
+              SIGN IN
             </Button>
-
-            {/* <CustomButton variant="contained" color="primary" className="ml-2">
-              Login In
-            </CustomButton> */}
           </div>
         </section>
       </FadeIn>
-
       <Particles />
     </>
   );
