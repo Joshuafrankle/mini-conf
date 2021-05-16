@@ -3,7 +3,9 @@ import Button from "@material-ui/core/Button";
 import { useState } from "react";
 
 export default function Toggle() {
-  const [btnImage, setBtnImage] = useState("🌞");
+  const [btnImage, setBtnImage] = useState(
+    localStorage.getItem("theme") == "theme-light" ? "🌞" : "🌛"
+  );
 
   const handleOnClick = () => {
     if (localStorage.getItem("theme") === "theme-light") {
