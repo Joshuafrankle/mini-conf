@@ -36,14 +36,11 @@ function Home(props) {
             LOGOUT
           </Button>
         </div>
-        <section
-          className="d-flex justify-content-center"
-          style={{ height: "" }}
-        >
+        <section className="d-flex justify-content-center">
           <div
             className="card cardColor mt-3"
             style={{
-              height: "80vh",
+              minHeight: "80vh",
               width: "90%",
               boxShadow:
                 "0 8px 16px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.16)",
