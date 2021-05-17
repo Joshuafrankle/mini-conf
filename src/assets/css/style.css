@@ -9,7 +9,8 @@
   --bg-color: #000000;
   --text-color: #fafafa;
   --button-text-color: #fafafa;
-  --button-bg-color: #161616;
+  --button-bg-color: #1b1b1b;
+  --card-color: #1b1b1b;
 }
 
 .theme-light {
@@ -19,11 +20,20 @@
   --text-color: #000000;
   --button-text-color: #0c4ec9;
   --button-bg-color: #ffffff;
+  --card-color: #ffffff;
   --button-shadow: 1px 1px 5px #8f78f8;
 }
 
 body {
   background-color: var(--bg-color);
+}
+
+.cardColor {
+  background-color: var(--card-color);
+}
+
+.textColor {
+  color: var(--text-color);
 }
 
 .main-bg {

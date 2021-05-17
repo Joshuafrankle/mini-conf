@@ -41,7 +41,7 @@ function Home(props) {
           style={{ height: "" }}
         >
           <div
-            className="card mt-3"
+            className="card cardColor mt-3"
             style={{
               height: "80vh",
               width: "90%",

@@ -5,7 +5,7 @@ function PopUp(props) {
     <>
       <motion.div
         whileHover={{ scale: 1.08 }}
-        className="card text-dark text-justify m-5 align-items-center"
+        className="card cardColor textColor text-justify m-5 align-items-center"
         style={{
           width: "17em",
           boxShadow:
