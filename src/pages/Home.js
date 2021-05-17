@@ -74,7 +74,7 @@ function Home(props) {
 
               <iframe
                 title="Titan Embed"
-                className="col-md-4 col-12"
+                className="col-md-4 col-12 titanEmbed"
                 src="https://titanembeds.com/embed/808401706337435709?css=31"
                 style={{ minHeight: "34vh" }}
                 frameBorder="0"
