@@ -58,7 +58,7 @@ body {
   color: var(--button-text-color);
   font-weight: bold;
   border-radius: 7px;
-  padding: 13px;
+  padding: 10px;
   box-shadow: var(--button-shadow);
 }
 
