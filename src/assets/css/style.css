@@ -34,17 +34,6 @@ body {
   background-color: var(--card-color);
 }
 
-.themeButtonColor {
-  background-color: var(--theme-button-color);
-  color: var(--button-text-color);
-  font-weight: bold;
-  font-family: Roboto;
-  letter-spacing: 1px;
-  border-radius: 7px;
-  padding: 10px;
-  box-shadow: var(--button-shadow);
-}
-
 .textColor {
   color: var(--text-color);
 }
@@ -61,6 +50,15 @@ body {
   letter-spacing: 1px;
   border-radius: 7px;
   padding: 10px;
+  box-shadow: var(--button-shadow);
+}
+
+.themeButtonColor {
+  background-color: var(--theme-button-color);
+  color: var(--button-text-color);
+  font-weight: bold;
+  border-radius: 7px;
+  padding: 13px;
   box-shadow: var(--button-shadow);
 }
 
