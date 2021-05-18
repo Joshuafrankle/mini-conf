@@ -55,6 +55,7 @@ body {
 
 .themeButtonColor {
   background-color: var(--theme-button-color);
+  color: var(--button-text-color);
   font-weight: bold;
   border-radius: 7px;
   padding: 13px;
