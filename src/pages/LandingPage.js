@@ -23,7 +23,7 @@ function LandingPage() {
       .auth()
       .signInWithPopup(provider)
       .then((result) => {
-        console.log(result);
+        //console.log(result);
         /** @type {firebase.auth.OAuthCredential} */
         // var credential = result.credential;
       })
