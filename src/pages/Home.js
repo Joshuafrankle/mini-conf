@@ -32,7 +32,7 @@ function Home(props) {
           >
             <img className="img-animation" width="70" height="70" alt="" />
           </a>
-          <Button class="CustomButton float-right mt-3" onClick={logout}>
+          <Button class="customButton float-right mt-3" onClick={logout}>
             LOGOUT
           </Button>
         </div>

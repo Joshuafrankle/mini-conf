@@ -52,7 +52,7 @@ function LandingPage() {
           <div className="text-center main-bg">
             <p className="pl-md-5 pl-0 text-pattarai">PATTARAI</p>
             <p className="title-word">Mini Conf</p>
-            <Button class="CustomButton" onClick={signInWithGoogle}>
+            <Button class="customButton" onClick={signInWithGoogle}>
               SIGN IN
             </Button>
           </div>

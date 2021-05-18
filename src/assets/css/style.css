@@ -9,8 +9,9 @@
   --bg-color: #000000;
   --text-color: #fafafa;
   --button-text-color: #fafafa;
-  --button-bg-color: #1b1b1b;
+  --button-bg-color: #100f10;
   --card-color: #1b1b1b;
+  --theme-button-color: #1b1b1b;
 }
 
 .theme-light {
@@ -21,6 +22,7 @@
   --button-text-color: #0c4ec9;
   --button-bg-color: #ffffff;
   --card-color: #ffffff;
+  --theme-button-color: #ffffff;
   --button-shadow: 1px 1px 5px #8f78f8;
 }
 
@@ -32,6 +34,17 @@ body {
   background-color: var(--card-color);
 }
 
+.themeButtonColor {
+  background-color: var(--theme-button-color);
+  color: var(--button-text-color);
+  font-weight: bold;
+  font-family: Roboto;
+  letter-spacing: 1px;
+  border-radius: 7px;
+  padding: 10px;
+  box-shadow: var(--button-shadow);
+}
+
 .textColor {
   color: var(--text-color);
 }
@@ -40,7 +53,7 @@ body {
   background-color: var(--bg-color);
 }
 
-.CustomButton {
+.customButton {
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
   font-weight: bold;
@@ -120,7 +133,7 @@ button {
   .stream-text {
     font-size: 15px;
   }
-  .CustomButton {
+  .customButton {
     font-size: 11px;
   }
   .img-animation {
