@@ -25,7 +25,7 @@ export default function Toggle() {
 
   return (
     <>
-      <Button class="themeButtonColor" onClick={handleOnClick}>
+      <Button class="themeButton" onClick={handleOnClick}>
         {btnImage}
       </Button>
     </>

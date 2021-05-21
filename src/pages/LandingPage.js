@@ -41,7 +41,7 @@ function LandingPage() {
     <>
       <FadeIn>
         <div>
-          <p className="pt-3 float-left ml-3">
+          <p className="pt-3 float-left ml-3 homeTheme">
             <Toggle />
           </p>
         </div>
