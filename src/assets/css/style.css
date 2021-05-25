@@ -40,6 +40,8 @@ body {
 
 .main-bg {
   background-color: var(--bg-color);
+  width: 650px;
+  height: 100%;
 }
 
 .customButton {
@@ -137,8 +139,14 @@ button {
   .img-animation {
     margin-left: 15px;
   }
+  .main-bg {
+    width: 240px;
+  }
   .titanEmbed {
     margin-top: 12px;
+  }
+  .themeButton {
+    font-size: 10px;
   }
   .homeTheme .themeButton {
     position: absolute;
