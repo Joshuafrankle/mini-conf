@@ -32,18 +32,15 @@ function Home(props) {
           >
             <img className="img-animation" width="70" height="70" alt="" />
           </a>
-          <Button class="CustomButton float-right mt-3" onClick={logout}>
+          <Button class="customButton float-right mt-3" onClick={logout}>
             LOGOUT
           </Button>
         </div>
-        <section
-          className="d-flex justify-content-center"
-          style={{ height: "" }}
-        >
+        <section className="d-flex justify-content-center">
           <div
-            className="card mt-3"
+            className="card cardColor mt-3"
             style={{
-              height: "80vh",
+              minHeight: "80vh",
               width: "90%",
               boxShadow:
                 "0 8px 16px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.16)",
@@ -74,7 +71,7 @@ function Home(props) {
 
               <iframe
                 title="Titan Embed"
-                className="col-md-4 col-12"
+                className="col-md-4 col-12 titanEmbed"
                 src="https://titanembeds.com/embed/808401706337435709?css=31"
                 style={{ minHeight: "34vh" }}
                 frameBorder="0"

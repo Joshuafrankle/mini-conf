@@ -9,7 +9,9 @@
   --bg-color: #000000;
   --text-color: #fafafa;
   --button-text-color: #fafafa;
-  --button-bg-color: #161616;
+  --button-bg-color: #100f10;
+  --card-color: #1b1b1b;
+  --theme-button-color: #1b1b1b;
 }
 
 .theme-light {
@@ -19,6 +21,8 @@
   --text-color: #000000;
   --button-text-color: #0c4ec9;
   --button-bg-color: #ffffff;
+  --card-color: #ffffff;
+  --theme-button-color: #ffffff;
   --button-shadow: 1px 1px 5px #8f78f8;
 }
 
@@ -26,16 +30,35 @@ body {
   background-color: var(--bg-color);
 }
 
-.main-bg {
-  background-color: var(--bg-color);
+.cardColor {
+  background-color: var(--card-color);
 }
 
-.CustomButton {
+.textColor {
+  color: var(--text-color);
+}
+
+.main-bg {
+  background-color: var(--bg-color);
+  width: 650px;
+  height: 100%;
+}
+
+.customButton {
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
   font-weight: bold;
   font-family: Roboto;
   letter-spacing: 1px;
+  border-radius: 7px;
+  padding: 10px;
+  box-shadow: var(--button-shadow);
+}
+
+.themeButton {
+  background-color: var(--theme-button-color);
+  color: var(--button-text-color);
+  font-weight: bold;
   border-radius: 7px;
   padding: 10px;
   box-shadow: var(--button-shadow);
@@ -98,7 +121,7 @@ button {
   text-shadow: 0px 0px 0px transparent;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 765px) {
   .title-word {
     font-size: 50px;
   }
@@ -110,10 +133,23 @@ button {
   .stream-text {
     font-size: 15px;
   }
-  .CustomButton {
+  .customButton {
     font-size: 11px;
   }
   .img-animation {
     margin-left: 15px;
+  }
+  .main-bg {
+    width: 240px;
+  }
+  .titanEmbed {
+    margin-top: 12px;
+  }
+  .themeButton {
+    font-size: 10px;
+  }
+  .homeTheme .themeButton {
+    position: absolute;
+    margin-top: 40px;
   }
 }
