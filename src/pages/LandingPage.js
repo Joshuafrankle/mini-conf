@@ -55,6 +55,14 @@ function LandingPage() {
             <Button class="customButton" onClick={signInWithGoogle}>
               SIGN IN
             </Button>
+            <Button
+              class="customButton"
+              onClick={() => {
+                ErrorButton;
+              }}
+            >
+              error
+            </Button>
           </div>
         </div>
       </FadeIn>
