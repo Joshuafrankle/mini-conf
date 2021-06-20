@@ -1,22 +1,27 @@
-import LaptopLogo from "../assets/images/Laptop.svg";
+import LaptopLogo from "../assets/images/error.svg";
 
 function Error404() {
+  function takeHome() {
+    window.location.replace("/");
+  }
   return (
     <>
       <section
-        className="align-items-center justify-content-center bg-dark"
+        className="d-flex justify-content-center align-items-center bg-dark"
         style={{ height: "100vh" }}
       >
         <div className="text-center">
-          <img
-            src={LaptopLogo}
-            className="errorImage"
-            alt=""
-            style={{ maxHeight: "90vh", maxWidth: "90vh" }}
-          />
-          <h3 className="stream-text text-white">
-            Uh no! Requested URL doesn't exist
-          </h3>
+          <h1 className="stream-text text-white mb-5">
+            Oops! Requested URL doesn't exist
+          </h1>
+          <img src={LaptopLogo} className="" alt="Page not found" />
+          <button
+            onClick={takeHome}
+            className="errorButton mt-5 text-white btn btn-primary"
+            style={{ backgroundColor: "#363636" }}
+          >
+            <span>Take me home</span>
+          </button>
         </div>
       </section>
     </>
