@@ -8,7 +8,7 @@ import { Integrations } from "@sentry/tracing";
 const { REACT_APP_SENTRY_KEY } = process.env;
 
 Sentry.init({
-  dsn: REACT_APP_SENTRY_KEY,
+  dsn: `${REACT_APP_SENTRY_KEY}`,
 
   beforeSend(event, hint) {
     if (event.exception) {
