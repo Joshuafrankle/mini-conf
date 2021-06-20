@@ -4,6 +4,8 @@ import Marquee from "react-fast-marquee";
 import PopUp from "../animations/PopUpCards";
 import { animateScroll as scroll } from "react-scroll";
 
+const { REACT_APP_YOUTUBE_API_KEY } = process.env;
+
 export default class YoutubeCards extends React.Component {
   state = {
     videoitems: [],
@@ -12,7 +14,7 @@ export default class YoutubeCards extends React.Component {
   componentDidMount() {
     axios
       .get(
-        `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails%2Cstatus&playlistId=PLLCdGWbcw9uwhUPaCmtQlHlMKyE6R7a1P&key=AIzaSyAjeovAn3aPZ68gsufq5h1gKryTMf3YPIY`
+        `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails%2Cstatus&playlistId=PLLCdGWbcw9uwhUPaCmtQlHlMKyE6R7a1P&key=${REACT_APP_YOUTUBE_API_KEY}`
       )
       .then((res) => {
         const videoitems = res.data.items;
