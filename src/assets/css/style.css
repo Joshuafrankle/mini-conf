@@ -38,6 +38,10 @@ body {
   color: var(--text-color);
 }
 
+a {
+  color: inherit;
+}
+
 .main-bg {
   background-color: var(--bg-color);
   width: 650px;
@@ -121,6 +125,37 @@ button {
   text-shadow: 0px 0px 0px transparent;
 }
 
+/* Take me home button - Start */
+
+.errorButton {
+  font-size: 20px;
+}
+
+.errorButton span {
+  position: relative;
+  transition: 0.5s;
+}
+
+.errorButton span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.errorButton:hover span {
+  padding-right: 20px;
+}
+
+.errorButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Take me home button - End */
+
 @media only screen and (max-width: 765px) {
   .title-word {
     font-size: 50px;
@@ -132,6 +167,9 @@ button {
   }
   .stream-text {
     font-size: 15px;
+  }
+  .errorButton {
+    font-size: 10px;
   }
   .customButton {
     font-size: 11px;
