@@ -12,6 +12,8 @@
   --button-bg-color: #100f10;
   --card-color: #1b1b1b;
   --theme-button-color: #1b1b1b;
+  --scroll-track-color: #1b1b1b;
+  --scroll-thumb-color: #fafafa;
 }
 
 .theme-light {
@@ -23,8 +25,24 @@
   --button-bg-color: #ffffff;
   --card-color: #ffffff;
   --theme-button-color: #ffffff;
+  --scroll-track-color: #dadada;
+  --scroll-thumb-color: #1b1b1b;
   --button-shadow: 1px 1px 5px #8f78f8;
 }
+
+/* Custom Scrollbar */
+html::-webkit-scrollbar {
+  width: 14px;
+}
+html::-webkit-scrollbar-track {
+  background-color: var(--scroll-track-color);
+  border-radius: 10px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+  border-radius: 10px;
+}
+/* Custom Scrollbar */
 
 body {
   background-color: var(--bg-color);
@@ -126,16 +144,13 @@ button {
 }
 
 /* Take me home button - Start */
-
 .errorButton {
   font-size: 20px;
 }
-
 .errorButton span {
   position: relative;
   transition: 0.5s;
 }
-
 .errorButton span:after {
   content: "\00bb";
   position: absolute;
@@ -144,16 +159,13 @@ button {
   right: -20px;
   transition: 0.5s;
 }
-
 .errorButton:hover span {
   padding-right: 20px;
 }
-
 .errorButton:hover span:after {
   opacity: 1;
   right: 0;
 }
-
 /* Take me home button - End */
 
 @media only screen and (max-width: 765px) {
