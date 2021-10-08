@@ -23,10 +23,8 @@ export default function Home() {
   return (
     <>
       <FadeIn>
-        <div className="p-3 text-center">
-          <div className="float-left mt-3">
-            <Toggle />
-          </div>
+        <section className="d-flex align-items-center justify-content-between mx-4 my-3">
+          <Toggle />
           <a
             href="https://www.pattarai.in/"
             target="_blank"
@@ -34,13 +32,14 @@ export default function Home() {
           >
             <img className="img-animation" width="70" height="70" alt="" />
           </a>
-          <Button class="customButton float-right mt-3" onClick={logout}>
+          <Button class="customButton" onClick={logout}>
             LOGOUT
           </Button>
-        </div>
-        <section className="d-flex justify-content-center">
+        </section>
+
+        <section className="d-flex justify-content-center align-items-center mt-3">
           <div
-            className="card cardColor mt-3"
+            className="card"
             style={{
               minHeight: "80vh",
               width: "90%",
@@ -48,7 +47,7 @@ export default function Home() {
                 "0 8px 16px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.16)",
             }}
           >
-            <div className="card-body d-md-flex d-block">
+            <div className="card-body d-md-flex align-items-center d-block">
               <div id="no-stream">
                 <img
                   className="img-fluid"
@@ -60,11 +59,12 @@ export default function Home() {
                   Live Stream is Down. Check out our recorded events!
                 </h5>
               </div>
+
               <iframe
                 id="youtubeLive"
                 title="Youtube Live Stream"
-                className="col-md-8"
-                style={{ minHeight: "40vh", display: "none" }}
+                className="col-12 col-md-8 px-md-3 pb-3 pb-md-0"
+                style={{ height: "70vh", display: "none" }}
                 src={NoLiveStream}
                 frameBorder="0"
                 allowFullScreen
@@ -73,10 +73,10 @@ export default function Home() {
 
               <iframe
                 title="Titan Embed"
-                className="col-md-4 col-12 titanEmbed"
+                className="col-12 col-md-4"
                 src="https://titanembeds.com/embed/808401706337435709?css=31"
-                style={{ minHeight: "34vh" }}
                 frameBorder="0"
+                style={{ height: "70vh" }}
               ></iframe>
             </div>
           </div>
