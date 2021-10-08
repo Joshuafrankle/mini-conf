@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import Particles from "../animations/Particles";
 import YoutubeCards from "../components/YoutubeCards";
 import NoLiveStream from "../assets/images/NoStream.png";
-import Toggle from "../DarkTheme";
+import Toggle from "../components/DarkTheme";
 
 function Home(props) {
   const history = useHistory();

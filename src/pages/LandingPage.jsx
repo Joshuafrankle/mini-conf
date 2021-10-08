@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 import FadeIn from "../animations/FadeIn";
 import Particles from "../animations/Particles";
 import { checkTheme } from "./theme";
-import Toggle from "../DarkTheme";
+import Toggle from "../components/DarkTheme";
 
 function LandingPage() {
   const history = useHistory();
