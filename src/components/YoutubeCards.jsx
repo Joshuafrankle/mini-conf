@@ -2,15 +2,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Marquee from "react-fast-marquee";
 import PopUp from "../animations/PopUpCards";
-import { animateScroll as scroll } from "react-scroll";
 
 export default function YoutubeCards() {
   const { REACT_APP_YOUTUBE_API_KEY } = process.env;
   const [videoItems, setVideoItems] = useState([]);
-
-  function scrollTop() {
-    scroll.scrollMore(-330);
-  }
 
   useEffect(() => {
     axios
@@ -38,7 +33,7 @@ export default function YoutubeCards() {
             <button
               key={id}
               onClick={() => {
-                scrollTop();
+                window.scrollTo(0, 0);
                 var livestream = document.getElementById("youtubeLive");
                 livestream.style.display = "block";
                 document.getElementById("no-stream").style.display = "none";
