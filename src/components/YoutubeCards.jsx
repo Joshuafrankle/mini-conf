@@ -21,7 +21,7 @@ export default function YoutubeCards() {
 
   return (
     <>
-      {videoItems && (
+      {videoItems.length >= 1 && (
         <Marquee
           direction="right"
           speed={30}
