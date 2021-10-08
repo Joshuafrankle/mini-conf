@@ -1,55 +1,40 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import firebase from "firebase/app";
 import LinearProgress from "@material-ui/core/LinearProgress";
 
-class PrivateRoute extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLoaded: false,
-    };
-  }
+export default function HomeRoute(props) {
+  const Component = props.component;
+  const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(null);
 
-  componentDidMount() {
-    firebase.auth().onAuthStateChanged(
-      function (user) {
-        if (user) {
-          this.setState({
-            isLoaded: true,
-            user: user,
-          });
-        } else {
-          this.setState({
-            isLoaded: true,
-            user: false,
-          });
-        }
-      }.bind(this)
-    );
-  }
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        setUser(user);
+        setLoading(false);
+      } else {
+        setUser(false);
+        setLoading(false);
+      }
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  render() {
-    const { isLoaded, user } = this.state;
-
-    if (!isLoaded) {
-      return (
+  return (
+    <>
+      {loading ? (
         <div
-          className="d-flex align-items-center justify-content-center container"
+          className="d-flex align-items-center justify-content-center px-3"
           style={{ height: "100vh", width: "100vw" }}
         >
-          <LinearProgress className="w-25" />
+          <LinearProgress />
         </div>
-      );
-    } else {
-      if (user) {
-        const Component = this.props.component;
-        return <Component />;
-      } else {
-        return <Redirect to={{ pathname: "/" }} />;
-      }
-    }
-  }
+      ) : user ? (
+        <Component />
+      ) : (
+        <Redirect to={{ pathname: "/" }} />
+      )}
+    </>
+  );
 }
-
-export default PrivateRoute;
