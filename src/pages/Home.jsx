@@ -50,7 +50,7 @@ export default function Home() {
             <div className="card-body d-md-flex align-items-center d-block">
               <div id="no-stream">
                 <img
-                  className="img-fluid"
+                  className="img-fluid px-md-3"
                   src={NoLiveStream}
                   height={400}
                   alt=""
