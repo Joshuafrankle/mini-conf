@@ -117,6 +117,7 @@ a {
 }
 
 .img-animation {
+  margin-left: 15%;
   background-image: linear-gradient(
     to right,
     var(--color-start),
@@ -179,9 +180,6 @@ button {
   }
   .customButton {
     font-size: 11px;
-  }
-  .img-animation {
-    margin-left: 15px;
   }
   .themeButton {
     font-size: 10px;
