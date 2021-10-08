@@ -26,6 +26,19 @@
   --button-shadow: 1px 1px 5px #8f78f8;
 }
 
+/* Custom Scrollbar */
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+  border-radius: 10px;
+}
+/* Custom Scrollbar */
+
 body {
   background-color: var(--bg-color);
 }
