@@ -40,16 +40,16 @@ export default function LandingPage() {
     <>
       <FadeIn>
         <div>
-          <p className="pt-3 float-left ml-3 homeTheme">
+          <p className="p-3">
             <Toggle />
           </p>
         </div>
         <div
-          className="d-flex align-items-center justify-content-center container main-bg"
-          style={{ height: "100vh" }}
+          className="d-flex align-items-center justify-content-center w-100"
+          style={{ height: "80vh" }}
         >
           <div className="text-center">
-            <p className="pl-md-5 pl-0 text-pattarai">PATTARAI</p>
+            <p className="text-pattarai">PATTARAI</p>
             <p className="title-word">Mini Conf</p>
             <Button class="customButton" onClick={signInWithGoogle}>
               SIGN IN

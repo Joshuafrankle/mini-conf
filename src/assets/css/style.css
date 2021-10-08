@@ -44,8 +44,6 @@ a {
 
 .main-bg {
   background-color: var(--bg-color);
-  width: 650px;
-  height: 100%;
 }
 
 .customButton {
@@ -71,7 +69,9 @@ a {
 .text-pattarai {
   color: var(--text-color);
   font-family: Montserrat;
-  letter-spacing: 50px;
+  font-size: 1vw;
+  letter-spacing: 5vw;
+  margin-left: 8.5%;
 }
 
 @keyframes animate {
@@ -85,9 +85,8 @@ a {
 
 .title-word {
   font-family: Open Sans;
-  font-size: 8rem;
+  font-size: 10vw;
   font-weight: 100px;
-
   background-image: linear-gradient(
     to right,
     var(--color-start),
@@ -96,7 +95,6 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-
   background-size: 300%;
   background-position: -100%;
   animation: animate 2s infinite alternate-reverse;
@@ -126,16 +124,13 @@ button {
 }
 
 /* Take me home button - Start */
-
 .errorButton {
   font-size: 20px;
 }
-
 .errorButton span {
   position: relative;
   transition: 0.5s;
 }
-
 .errorButton span:after {
   content: "\00bb";
   position: absolute;
@@ -144,27 +139,16 @@ button {
   right: -20px;
   transition: 0.5s;
 }
-
 .errorButton:hover span {
   padding-right: 20px;
 }
-
 .errorButton:hover span:after {
   opacity: 1;
   right: 0;
 }
-
 /* Take me home button - End */
 
 @media only screen and (max-width: 765px) {
-  .title-word {
-    font-size: 50px;
-  }
-  .text-pattarai {
-    margin-left: 25px;
-    font-size: 10px;
-    letter-spacing: 20px;
-  }
   .stream-text {
     font-size: 15px;
   }
@@ -176,9 +160,6 @@ button {
   }
   .img-animation {
     margin-left: 15px;
-  }
-  .main-bg {
-    width: 240px;
   }
   .titanEmbed {
     margin-top: 12px;
