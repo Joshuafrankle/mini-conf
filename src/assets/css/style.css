@@ -8,6 +8,7 @@
   --color-end: #1dfdd8;
   --bg-color: #000000;
   --text-color: #fafafa;
+  --main-color: #000000da;
   --button-text-color: #fafafa;
   --button-bg-color: #100f10;
   --card-color: #1b1b1b;
@@ -23,6 +24,7 @@
   --button-bg-color: #ffffff;
   --card-color: #ffffff;
   --theme-button-color: #ffffff;
+  --main-color: #ffffffda;
   --button-shadow: 1px 1px 5px #8f78f8;
 }
 
@@ -56,7 +58,7 @@ a {
 }
 
 .main-bg {
-  background-color: var(--bg-color);
+  background-color: var(--main-color);
 }
 
 .customButton {
