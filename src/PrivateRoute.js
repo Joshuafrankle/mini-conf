@@ -12,11 +12,8 @@ export default function HomeRoute(props) {
     firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
         setUser(user);
-        setLoading(false);
-      } else {
-        setUser(false);
-        setLoading(false);
       }
+      setLoading(false);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
