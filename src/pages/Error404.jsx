@@ -12,7 +12,7 @@ function Error404() {
       >
         <div className="text-center">
           <h1 className="stream-text text-white mb-5">
-            Oops! Requested URL doesn't exist
+            Oops! Seems like you are lost
           </h1>
           <img src={LaptopLogo} className="" alt="Page not found" />
           <button
