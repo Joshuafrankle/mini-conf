@@ -11,6 +11,7 @@ import Toggle from "../DarkTheme";
 
 function LandingPage() {
   const history = useHistory();
+
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       history.push("/home");
@@ -23,9 +24,7 @@ function LandingPage() {
       .auth()
       .signInWithPopup(provider)
       .then((result) => {
-        //console.log(result);
         /** @type {firebase.auth.OAuthCredential} */
-        // var credential = result.credential;
       })
       .catch((error) => {
         // var errorCode = error.code;
@@ -35,7 +34,7 @@ function LandingPage() {
 
   useEffect(() => {
     checkTheme();
-  });
+  }, []);
 
   return (
     <>
