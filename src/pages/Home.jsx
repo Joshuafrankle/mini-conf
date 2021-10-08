@@ -63,8 +63,8 @@ export default function Home() {
               <iframe
                 id="youtubeLive"
                 title="Youtube Live Stream"
-                className="col-12 col-md-8 px-md-3 pb-3 pb-md-0"
-                style={{ height: "70vh", display: "none" }}
+                className="col-12 col-md-8 px-md-3 pb-3 pb-md-0 iframe-height"
+                style={{ display: "none" }}
                 src={NoLiveStream}
                 frameBorder="0"
                 allowFullScreen
@@ -73,10 +73,9 @@ export default function Home() {
 
               <iframe
                 title="Titan Embed"
-                className="col-12 col-md-4"
+                className="col-12 col-md-4 iframe-height"
                 src="https://titanembeds.com/embed/808401706337435709?css=31"
                 frameBorder="0"
-                style={{ height: "70vh" }}
               ></iframe>
             </div>
           </div>
