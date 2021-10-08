@@ -1,34 +1,32 @@
+import { useState, useEffect } from "react";
 import axios from "axios";
-import React from "react";
 import Marquee from "react-fast-marquee";
 import PopUp from "../animations/PopUpCards";
 import { animateScroll as scroll } from "react-scroll";
 
-const { REACT_APP_YOUTUBE_API_KEY } = process.env;
+export default function YoutubeCards() {
+  const { REACT_APP_YOUTUBE_API_KEY } = process.env;
+  const [videoItems, setVideoItems] = useState([]);
 
-export default class YoutubeCards extends React.Component {
-  state = {
-    videoitems: [],
-  };
+  function scrollTop() {
+    scroll.scrollMore(-330);
+  }
 
-  componentDidMount() {
+  useEffect(() => {
     axios
       .get(
         `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails%2Cstatus&playlistId=PLLCdGWbcw9uwhUPaCmtQlHlMKyE6R7a1P&key=${REACT_APP_YOUTUBE_API_KEY}`
       )
       .then((res) => {
         const videoitems = res.data.items;
-        //console.log(videoitems);
-        this.setState({ videoitems });
+        setVideoItems(videoitems);
       });
-  }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  render() {
-    function scrollTop() {
-      scroll.scrollMore(-330);
-    }
-    return (
-      <div>
+  return (
+    <>
+      {videoItems && (
         <Marquee
           direction="right"
           speed={30}
@@ -36,7 +34,7 @@ export default class YoutubeCards extends React.Component {
           gradientWidth={0}
           gradientColor={[31, 31, 31]}
         >
-          {this.state.videoitems.map((videoitems, id) => (
+          {videoItems.map((videos, id) => (
             <button
               key={id}
               onClick={() => {
@@ -46,17 +44,17 @@ export default class YoutubeCards extends React.Component {
                 document.getElementById("no-stream").style.display = "none";
                 livestream.src =
                   "https://www.youtube.com/embed/" +
-                  videoitems.contentDetails.videoId;
+                  videos.contentDetails.videoId;
               }}
             >
               <PopUp
-                src={videoitems.snippet.thumbnails.high.url}
-                title={videoitems.snippet.title}
+                src={videos.snippet.thumbnails.high.url}
+                title={videos.snippet.title}
               />
             </button>
           ))}
         </Marquee>
-      </div>
-    );
-  }
+      )}
+    </>
+  );
 }
