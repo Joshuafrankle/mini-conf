@@ -7,8 +7,9 @@ import YoutubeCards from "../components/YoutubeCards";
 import NoLiveStream from "../assets/images/NoStream.png";
 import Toggle from "../components/DarkTheme";
 
-function Home(props) {
+export default function Home() {
   const history = useHistory();
+
   function logout() {
     firebase
       .auth()
@@ -18,6 +19,7 @@ function Home(props) {
       })
       .catch((error) => {});
   }
+
   return (
     <>
       <FadeIn>
@@ -85,5 +87,3 @@ function Home(props) {
     </>
   );
 }
-
-export default Home;
