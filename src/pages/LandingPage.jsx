@@ -9,7 +9,7 @@ import Particles from "../animations/Particles";
 import { checkTheme } from "./theme";
 import Toggle from "../components/DarkTheme";
 
-function LandingPage() {
+export default function LandingPage() {
   const history = useHistory();
 
   firebase.auth().onAuthStateChanged((user) => {
@@ -61,5 +61,3 @@ function LandingPage() {
     </>
   );
 }
-
-export default LandingPage;
