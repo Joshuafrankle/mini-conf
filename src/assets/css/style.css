@@ -161,7 +161,14 @@ button {
 }
 /* Take me home button - End */
 
+.iframe-height {
+  height: 75vh;
+}
+
 @media only screen and (max-width: 765px) {
+  .iframe-height {
+    height: 50vh;
+  }
   .stream-text {
     font-size: 15px;
   }
