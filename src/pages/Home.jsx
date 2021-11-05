@@ -5,10 +5,11 @@ import { useHistory } from "react-router-dom";
 import Particles from "../animations/Particles";
 import YoutubeCards from "../components/YoutubeCards";
 import NoLiveStream from "../assets/images/NoStream.png";
-import Toggle from "../DarkTheme";
+import Toggle from "../components/DarkTheme";
 
-function Home(props) {
+export default function Home() {
   const history = useHistory();
+
   function logout() {
     firebase
       .auth()
@@ -18,13 +19,12 @@ function Home(props) {
       })
       .catch((error) => {});
   }
+
   return (
     <>
       <FadeIn>
-        <div className="p-3 text-center">
-          <div className="float-left mt-3">
-            <Toggle />
-          </div>
+        <section className="d-flex align-items-center justify-content-between mx-4 my-3">
+          <Toggle />
           <a
             href="https://www.pattarai.in/"
             target="_blank"
@@ -32,13 +32,14 @@ function Home(props) {
           >
             <img className="img-animation" width="70" height="70" alt="" />
           </a>
-          <Button class="customButton float-right mt-3" onClick={logout}>
+          <Button class="customButton" onClick={logout}>
             LOGOUT
           </Button>
-        </div>
-        <section className="d-flex justify-content-center">
+        </section>
+
+        <section className="d-flex justify-content-center align-items-center mt-3">
           <div
-            className="card cardColor mt-3"
+            className="card"
             style={{
               minHeight: "80vh",
               width: "90%",
@@ -46,10 +47,10 @@ function Home(props) {
                 "0 8px 16px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.16)",
             }}
           >
-            <div className="card-body d-md-flex d-block">
+            <div className="card-body d-md-flex align-items-center d-block">
               <div id="no-stream">
                 <img
-                  className="img-fluid"
+                  className="img-fluid px-md-3"
                   src={NoLiveStream}
                   height={400}
                   alt=""
@@ -58,11 +59,12 @@ function Home(props) {
                   Live Stream is Down. Check out our recorded events!
                 </h5>
               </div>
+
               <iframe
                 id="youtubeLive"
                 title="Youtube Live Stream"
-                className="col-md-8"
-                style={{ minHeight: "40vh", display: "none" }}
+                className="col-12 col-md-8 px-md-3 pb-3 pb-md-0 iframe-height"
+                style={{ display: "none" }}
                 src={NoLiveStream}
                 frameBorder="0"
                 allowFullScreen
@@ -71,9 +73,8 @@ function Home(props) {
 
               <iframe
                 title="Titan Embed"
-                className="col-md-4 col-12 titanEmbed"
+                className="col-12 col-md-4 iframe-height"
                 src="https://titanembeds.com/embed/808401706337435709?css=31"
-                style={{ minHeight: "34vh" }}
                 frameBorder="0"
               ></iframe>
             </div>
@@ -85,5 +86,3 @@ function Home(props) {
     </>
   );
 }
-
-export default Home;
