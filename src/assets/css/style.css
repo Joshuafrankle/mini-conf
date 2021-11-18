@@ -8,12 +8,11 @@
   --color-end: #1dfdd8;
   --bg-color: #000000;
   --text-color: #fafafa;
+  --main-color: #000000da;
   --button-text-color: #fafafa;
   --button-bg-color: #100f10;
   --card-color: #1b1b1b;
   --theme-button-color: #1b1b1b;
-  --scroll-track-color: #1b1b1b;
-  --scroll-thumb-color: #fafafa;
 }
 
 .theme-light {
@@ -25,21 +24,19 @@
   --button-bg-color: #ffffff;
   --card-color: #ffffff;
   --theme-button-color: #ffffff;
-  --scroll-track-color: #dadada;
-  --scroll-thumb-color: #1b1b1b;
+  --main-color: #ffffffda;
   --button-shadow: 1px 1px 5px #8f78f8;
 }
 
 /* Custom Scrollbar */
 html::-webkit-scrollbar {
-  width: 14px;
+  width: 10px;
 }
 html::-webkit-scrollbar-track {
-  background-color: var(--scroll-track-color);
-  border-radius: 10px;
+  background-color: var(--bg-color);
 }
 html::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-thumb-color);
+  background-color: var(--text-color);
   border-radius: 10px;
 }
 /* Custom Scrollbar */
@@ -48,7 +45,7 @@ body {
   background-color: var(--bg-color);
 }
 
-.cardColor {
+.card {
   background-color: var(--card-color);
 }
 
@@ -61,9 +58,7 @@ a {
 }
 
 .main-bg {
-  background-color: var(--bg-color);
-  width: 650px;
-  height: 100%;
+  background-color: var(--main-color);
 }
 
 .customButton {
@@ -89,7 +84,9 @@ a {
 .text-pattarai {
   color: var(--text-color);
   font-family: Montserrat;
-  letter-spacing: 50px;
+  font-size: 1vw;
+  letter-spacing: 5vw;
+  margin-left: 8.5%;
 }
 
 @keyframes animate {
@@ -103,9 +100,8 @@ a {
 
 .title-word {
   font-family: Open Sans;
-  font-size: 8rem;
+  font-size: 10vw;
   font-weight: 100px;
-
   background-image: linear-gradient(
     to right,
     var(--color-start),
@@ -114,7 +110,6 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-
   background-size: 300%;
   background-position: -100%;
   animation: animate 2s infinite alternate-reverse;
@@ -122,6 +117,7 @@ a {
 }
 
 .img-animation {
+  margin-left: 15%;
   background-image: linear-gradient(
     to right,
     var(--color-start),
@@ -168,14 +164,13 @@ button {
 }
 /* Take me home button - End */
 
+.iframe-height {
+  height: 75vh;
+}
+
 @media only screen and (max-width: 765px) {
-  .title-word {
-    font-size: 50px;
-  }
-  .text-pattarai {
-    margin-left: 25px;
-    font-size: 10px;
-    letter-spacing: 20px;
+  .iframe-height {
+    height: 50vh;
   }
   .stream-text {
     font-size: 15px;
@@ -186,20 +181,7 @@ button {
   .customButton {
     font-size: 11px;
   }
-  .img-animation {
-    margin-left: 15px;
-  }
-  .main-bg {
-    width: 240px;
-  }
-  .titanEmbed {
-    margin-top: 12px;
-  }
   .themeButton {
     font-size: 10px;
-  }
-  .homeTheme .themeButton {
-    position: absolute;
-    margin-top: 40px;
   }
 }
