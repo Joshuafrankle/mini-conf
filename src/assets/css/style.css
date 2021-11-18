@@ -168,7 +168,7 @@ button {
   height: 75vh;
 }
 
-@media only screen and (max-width: 765px) {
+@media (max-width: 767px) {
   .iframe-height {
     height: 50vh;
   }
@@ -183,5 +183,11 @@ button {
   }
   .themeButton {
     font-size: 10px;
+  }
+  .title-word {
+    font-size: 18vw;
+  }
+  .text-pattarai {
+    font-size: 2.5vw;
   }
 }
