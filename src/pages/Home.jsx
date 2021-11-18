@@ -16,8 +16,7 @@ export default function Home() {
       .signOut()
       .then(() => {
         history.push("/");
-      })
-      .catch((error) => {});
+      });
   }
 
   return (

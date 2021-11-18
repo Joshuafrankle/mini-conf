@@ -6,10 +6,10 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 export default function HomeRoute(props) {
   const Component = props.component;
   const [loading, setLoading] = useState(true);
-  const [user, setUser] = useState(null);
+  const [isuser, setUser] = useState(null);
 
   useEffect(() => {
-    firebase.auth().onAuthStateChanged(function (user) {
+    firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         setUser(user);
       }
@@ -27,7 +27,7 @@ export default function HomeRoute(props) {
         >
           <LinearProgress />
         </div>
-      ) : user ? (
+      ) : isuser ? (
         <Component />
       ) : (
         <Redirect to={{ pathname: "/" }} />

@@ -25,10 +25,6 @@ export default function LandingPage() {
       .signInWithPopup(provider)
       .then((result) => {
         /** @type {firebase.auth.OAuthCredential} */
-      })
-      .catch((error) => {
-        // var errorCode = error.code;
-        // var errorMessage = error.message;
       });
   }
 
@@ -39,13 +35,11 @@ export default function LandingPage() {
   return (
     <>
       <FadeIn>
-        <div>
-          <p className="p-3">
-            <Toggle />
-          </p>
-        </div>
+        <p className="p-3">
+          <Toggle />
+        </p>
         <div
-          className="d-flex align-items-center justify-content-center main-bg"
+          className="d-flex align-items-center justify-content-center main-bg w-100"
           style={{ height: "80vh" }}
         >
           <div className="text-center">
